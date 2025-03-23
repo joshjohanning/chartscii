@@ -1,0 +1,31 @@
+import { ChartOptions, ChartData } from '../types/types';
+import ChartFormatter from './formatter';
+declare class VerticalChartFormatter extends ChartFormatter {
+    private chart;
+    private options;
+    constructor(chart: ChartData, options: ChartOptions);
+    format(): string;
+    private formatChartScale;
+    private getMaxHeight;
+    private isLongChar;
+    private isFillLonger;
+    private getFillChar;
+    private getCharLengths;
+    private getCharWidth;
+    private getScaledBarSize;
+    private buildVerticalChart;
+    private formatChart;
+    private formatPercentage;
+    private formatSpace;
+    private formatBar;
+    private formatFill;
+    private formatLabel;
+    private formatValueLabel;
+    private formatLabels;
+    private formatValueLabels;
+    private composeFinalChart;
+    private formatChartTitle;
+    private formatBottom;
+    private formatValueWithDecimals;
+}
+export default VerticalChartFormatter;

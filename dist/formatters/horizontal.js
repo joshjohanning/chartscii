@@ -41,8 +41,8 @@ class HorizontalChartFormatter extends formatter_1.default {
             formattedValue = value.toFixed(this.options.valueLabelsDecimalPlaces);
         }
         // Add prefix if specified
-        if (this.options.valueLabelPrefix) {
-            return `${this.options.valueLabelPrefix}${formattedValue}`;
+        if (this.options.valueLabelsPrefix) {
+            return `${this.options.valueLabelsPrefix}${formattedValue}`;
         }
         return String(formattedValue);
     }

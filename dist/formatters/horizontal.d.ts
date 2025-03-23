@@ -7,7 +7,7 @@ declare class HorizontalChartFormatter extends ChartFormatter {
     offsetPercentage(): 0 | 1;
     formatStructure(structChar: string, color?: string): string;
     formatBar(point: ChartPoint, label: string, barHeight: number, padding: number): any;
-    formatValueWithDecimals(value: number): string | number;
+    formatValueWithDecimals(value: number): string;
     scaleBar(bar: string, value: number, label: string, color: string, barHeight: number, padding: number): string;
     formatFill(point: ChartPoint): string;
     formatPercentage(point: ChartPoint): string;

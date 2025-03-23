@@ -36,10 +36,15 @@ class HorizontalChartFormatter extends formatter_1.default {
         return point.color ? this.colorify(bar, color) : bar;
     }
     formatValueWithDecimals(value) {
+        let formattedValue = value;
         if (this.options.valueLabelsDecimalPlaces !== undefined) {
-            return value.toFixed(this.options.valueLabelsDecimalPlaces);
+            formattedValue = value.toFixed(this.options.valueLabelsDecimalPlaces);
         }
-        return value;
+        // Add prefix if specified
+        if (this.options.valueLabelPrefix) {
+            return `${this.options.valueLabelPrefix}${formattedValue}`;
+        }
+        return String(formattedValue);
     }
     scaleBar(bar, value, label, color, barHeight, padding) {
         const strippedLabel = this.stripStyle(label);
